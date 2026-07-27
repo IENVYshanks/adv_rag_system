@@ -14,10 +14,10 @@ RUN apt-get update \
         libmagic1 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY requirements-backend.txt .
 
 RUN python -m pip install --upgrade pip \
-    && python -m pip install -r requirements.txt
+    && python -m pip install -r requirements-backend.txt
 
 COPY app ./app
 

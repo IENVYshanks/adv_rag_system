@@ -1,0 +1,23 @@
+# FastAPI runtime
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+pydantic>=2.0.0
+
+# Agent and LLM gateway
+langchain
+langgraph
+langchain-openai
+portkey-ai
+nemoguardrails
+
+# Retrieval and embeddings
+qdrant-client
+langchain-google-genai
+sentence-transformers
+flashrank
+
+# Observability
+logfire[fastapi,requests]
+langsmith

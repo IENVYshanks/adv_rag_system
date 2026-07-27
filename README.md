@@ -86,6 +86,9 @@ Install dependencies:
 python -m pip install -r requirements.txt
 ```
 
+The backend Docker image uses the smaller `requirements-backend.txt` set and
+does not install Streamlit, ingestion tooling, or offline evaluation packages.
+
 ## Environment configuration
 
 Copy `.env.example` to `.env`:
