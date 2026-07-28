@@ -43,7 +43,9 @@ def guard(user_input: str) -> tuple[bool, str | None]:
     """Return whether a rail handled the input and its safe response."""
     rails = initialize_rails()
     with logfire.span("Guardrails input check"):
-        response = rails.generate(messages=[{"role": "user", "content": user_input}])
+        response = rails.generate(
+            messages=[{"role": "user", "content": user_input}]
+        )
 
     if isinstance(response, dict):
         content = str(response.get("content", ""))
